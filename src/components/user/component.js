@@ -16,12 +16,13 @@ const mapDispatchToProps = {
 
 class UserForm extends Component {
   render() {
+    const { id, firstname, lastname, email, deleteUser } = this.props;
     return (
       <>
-        <TableCell>{this.props.id}</TableCell>
-        <TableCell>{this.props.firstname}</TableCell>
-        <TableCell>{this.props.lastname}</TableCell>
-        <TableCell>{this.props.email}</TableCell>
+        <TableCell>{id}</TableCell>
+        <TableCell>{firstname}</TableCell>
+        <TableCell>{lastname}</TableCell>
+        <TableCell>{email}</TableCell>
 
         <TableCell>
           <Box display="flex" gap={1}>
@@ -39,7 +40,7 @@ class UserForm extends Component {
               variant="outlined"
               color="error"
               startIcon={<DeleteIcon />}
-              onClick={() => this.props.deleteUser(this.props.id)}
+              onClick={() => deleteUser(id)}
             >
               DELETE
             </Button>

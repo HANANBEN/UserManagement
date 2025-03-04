@@ -57,7 +57,8 @@ class UserList extends Component {
   }
 
   render() {
-    if (this.props.isLoading) {
+    const { users, isLoading } = this.props;
+    if (isLoading) {
       return <Loading />;
     }
 
@@ -107,7 +108,7 @@ class UserList extends Component {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {(this.props.users || []).map((user) => {
+                  {(users || []).map((user) => {
                     console.log(user);
 
                     return (
