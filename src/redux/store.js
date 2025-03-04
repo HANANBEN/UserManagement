@@ -1,21 +1,12 @@
-
-
-
-
-import { combineReducers ,createStore} from "redux"
+import { combineReducers, createStore } from "redux";
 import userReducer from "./userReducer";
 
-
-
-
-
 const rootReducer = combineReducers({
-
-users: userReducer,
-
-
-})
-const store = createStore(rootReducer ,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+  users: userReducer,
+});
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default store;
