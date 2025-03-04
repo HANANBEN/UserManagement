@@ -1,5 +1,5 @@
 import { Button, THEME_ID } from "@mui/material";
-import { Box, TableCell } from "@mui/material";
+import { Box, TableCell, TextField } from "@mui/material";
 
 import DeleteIcon from "@mui/icons-material/Delete";
 
@@ -20,9 +20,30 @@ class UserForm extends Component {
     return (
       <>
         <TableCell>{id}</TableCell>
-        <TableCell>{firstname}</TableCell>
-        <TableCell>{lastname}</TableCell>
-        <TableCell>{email}</TableCell>
+        <TableCell>
+          <TextField
+            variant="standard"
+            InputProps={{ disableUnderline: true }}
+            placeholder="Enter firstname..."
+            value={firstname} // Setting the value
+          />
+        </TableCell>
+        <TableCell>
+          <TextField
+            variant="standard"
+            InputProps={{ disableUnderline: true }}
+            placeholder="Enter firstname..."
+            value={lastname} // Setting the value
+          />
+        </TableCell>
+        <TableCell>
+          <TextField
+            variant="standard"
+            InputProps={{ disableUnderline: true }}
+            placeholder="Enter firstname..."
+            value={email} // Setting the value
+          />
+        </TableCell>
 
         <TableCell>
           <Box display="flex" gap={1}>

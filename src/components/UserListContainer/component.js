@@ -57,7 +57,7 @@ class UserList extends Component {
   }
 
   render() {
-    const { users, isLoading } = this.props;
+    const { users, isLoading, addUser } = this.props;
     if (isLoading) {
       return <Loading />;
     }
@@ -80,7 +80,12 @@ class UserList extends Component {
               maxWidth: "1000px",
             }}
           >
-            <Button variant="contained" color="primary" startIcon={<AddIcon />}>
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<AddIcon />}
+              onClick={addUser}
+            >
               Add User
             </Button>
             <Typography variant="h5" color="black" textAlign="center" mb={2}>
