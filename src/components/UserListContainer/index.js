@@ -1,8 +1,9 @@
 import { Component } from "react";
+import UserList from "./component";
 import { connect } from "react-redux";
 import { addUser, fetchUsersRequest ,fetchUsersSucces } from "../../redux/userReducer/action";
 
-import UserList from "./component";
+
 
 
 const mapDisparchToProps = {
@@ -21,7 +22,7 @@ const mapStateToProps = (store) =>(
 class UserListContainer extends Component{
     render(){
         return <UserList {...this.props} />
-
+ 
     }
 }
 export default connect(mapStateToProps , mapDisparchToProps)(UserListContainer);

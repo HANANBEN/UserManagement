@@ -119,7 +119,7 @@ render(){
     return (
         <TableRow>
     
-         <UserFormContainer  key={user.id} firstname={user.firstName}  lastname={user.lastName} email={user.email} id={user.id} /> 
+         <UserForm  key={user.id} firstname={user.firstName}  lastname={user.lastName} email={user.email} id={user.id} /> 
          </TableRow>
     )
   

@@ -6,8 +6,18 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import { deleteUser } from "../../redux/userReducer/action";
+import { connect } from "react-redux";
 
 const { Component } = require("react");
+
+
+const mapDispatchToProps = {
+  deleteUser,
+
+}
+
+
+
 
 
 class UserForm extends Component{
@@ -48,4 +58,4 @@ class UserForm extends Component{
 
 
 }
-export default UserForm;
+export default connect(null ,mapDispatchToProps)(UserForm);
